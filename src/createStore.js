@@ -1,5 +1,5 @@
 export default function createStore(reducer){
-  let state = [];
+  let state;
   let listeners = [];
 
   const getState = () => { return state; }
@@ -12,6 +12,8 @@ export default function createStore(reducer){
   const subscribe = (listener) => {
     listeners.push(listener)
   }
+
+  dispatch({});
 
   return {
     getState: getState,
